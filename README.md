@@ -167,7 +167,7 @@ A full-stack application that demonstrates integration with various third-party 
 
 ## Author
 
-Prashant Maurya
+Prashant 
 Email: prashantkd010@gmail.com
 
 ## License
