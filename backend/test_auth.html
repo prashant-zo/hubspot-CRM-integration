@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test HubSpot Auth</title></head>
+<body>
+    <h1>Test HubSpot Authorization</h1>
+    <form action="http://localhost:8000/integrations/hubspot/authorize" method="POST" target="_blank">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" value="test_user_1"><br><br>
+        <label for="org_id">Org ID:</label>
+        <input type="text" id="org_id" name="org_id" value="test_org_1"><br><br>
+        <input type="submit" value="Authorize HubSpot">
+    </form>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data === 'hubspotIntegrationSuccess') {
+                alert('HubSpot Integration Successful (message received from popup)!');
+            }
+        });
+    </script>
+</body>
+</html>
